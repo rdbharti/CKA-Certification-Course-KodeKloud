@@ -1,5 +1,4 @@
 # Labels and Selectors
-  - Take me to [Video Tutorial](https://kodekloud.com/topic/labels-and-selectors/)
   
 In this section, we will take a look at **`Labels and Selectors`**
 
@@ -7,19 +6,19 @@ In this section, we will take a look at **`Labels and Selectors`**
   
 #### Labels are properties attached to each item.
 
-  ![labels-ckc](../../images/labels-ckc.PNG)
+  ![labels-ckc](../images/labels-ckc.PNG)
   
 #### Selectors help you to filter these items
  
-  ![sl](../../images/sl.PNG)
+  ![sl](../images/sl.PNG)
   
 How are labels and selectors are used in kubernetes?
 - We have created different types of objects in kubernetes such as **`PODs`**, **`ReplicaSets`**, **`Deployments`** etc.
   
-  ![ls](../../images/ls.PNG)
+  ![ls](../images/ls.PNG)
   
 How do you specify labels?
-   ```
+   ```yaml
     apiVersion: v1
     kind: Pod
     metadata:
@@ -34,7 +33,7 @@ How do you specify labels?
        ports:
        - containerPort: 8080
    ```
- ![lpod](../../images/lpod.PNG)
+ ![lpod](../images/lpod.PNG)
  
 Once the pod is created, to select the pod with labels run the below command
 ```
@@ -42,7 +41,7 @@ $ kubectl get pods --selector app=App1
 ```
 
 Kubernetes uses labels to connect different objects together
-   ```
+   ```yaml
     apiVersion: apps/v1
     kind: ReplicaSet
     metadata:
@@ -66,11 +65,12 @@ Kubernetes uses labels to connect different objects together
           image: simple-webapp   
    ```
 
-  ![lrs](../../images/lrs.PNG)
+  ![lrs](../images/lrs.PNG)
+
 
 For services
  
-      ```
+      ```yaml
       apiVersion: v1
       kind: Service
       metadata:
@@ -83,11 +83,11 @@ For services
          port: 80
          targetPort: 9376 
        ```
-  ![lrs1](../../images/lrs1.PNG)
+  ![lrs1](../images/lrs1.PNG)
   
 ## Annotations
 - While labels and selectors are used to group objects, annotations are used to record other details for informative purpose.
-    ```
+    ```yaml
     apiVersion: apps/v1
     kind: ReplicaSet
     metadata:
@@ -112,7 +112,7 @@ For services
         - name: simple-webapp
           image: simple-webapp   
     ```
-  ![annotations](../../images/annotations.PNG)
+  ![annotations](../images/annotations.PNG)
 
 K8s Reference Docs:
 - https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
