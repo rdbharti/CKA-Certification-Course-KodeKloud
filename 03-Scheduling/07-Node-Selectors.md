@@ -4,7 +4,7 @@ In this section, we will take a look at Node Selectors in Kubernetes
 
 #### We add new property called Node Selector to the spec section and specify the label.
 - The scheduler uses these labels to match and identify the right node to place the pods on.
-  ```
+  ```yaml
   apiVersion: v1
   kind: Pod
   metadata:
@@ -32,7 +32,7 @@ In this section, we will take a look at Node Selectors in Kubernetes
 ![ln](../images/ln.PNG)
   
 - To create a pod definition
-  ```
+  ```yaml
   apiVersion: v1
   kind: Pod
   metadata:
