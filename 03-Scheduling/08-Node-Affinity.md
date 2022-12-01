@@ -6,7 +6,7 @@ In this section, we will talk about "Node Affinity" feature in kubernetes.
 - With **`Node Selectors`** we cannot provide the advance expressions.
   ```yaml
   apiVersion: v1
-  kind: Pod
+  kind: Pods
   metadata:
    name: myapp-pod
   spec:
