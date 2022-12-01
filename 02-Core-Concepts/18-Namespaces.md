@@ -23,7 +23,7 @@ So far in this course we have created **`Objects`** such as **`PODs`**, **`Deplo
   
 - Here we have a pod definition file, when we create a pod with pod-definition file, the pod is created in the default namespace.
 
-```
+```yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -46,7 +46,7 @@ spec:
   ![ns9](../images/ns9.PNG)
 
 - If you want to make sure that this pod gets you created in the **`dev`** env all the time, even if you don't specify in the command line, you can move the **`--namespace`** definition into the pod-definition file.
-```
+```yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -64,7 +64,7 @@ spec:
   ![ns10](../images/ns10.PNG)
   
 - To create a new namespace, create a namespace definition as shown below and then run **`kubectl create`**
-```
+```yaml
 apiVersion: v1
 kind: Namespace
 metadata:
@@ -91,7 +91,7 @@ metadata:
   ![ns12](../images/ns12.PNG)
   
 - To limit resources in a namespace, create a resource quota. To create one start with **`ResourceQuota`** definition file.
-```
+```yaml
 apiVersion: v1
 kind: ResourceQuota
 metadata:
