@@ -1,5 +1,4 @@
 # DaemonSets
-  - Take me to [Video Tutorial](https://kodekloud.com/topic/daemonsets/)
 
 In this section, we will take a look at DaemonSets.
 
@@ -18,7 +17,7 @@ In this section, we will take a look at DaemonSets.
 ## DaemonSets - Definition
 - Creating a DaemonSet is similar to the ReplicaSet creation process.
 - For DaemonSets, we start with apiVersion, kind as **`DaemonSets`** instead of **`ReplicaSet`**, metadata and spec. 
-  ```
+  ```yaml
   apiVersion: apps/v1
   kind: Replicaset
   metadata:
@@ -39,7 +38,7 @@ In this section, we will take a look at DaemonSets.
           image: monitoring-agent
   ```
   
-  ```
+  ```yaml
   apiVersion: apps/v1
   kind: DaemonSet
   metadata:
