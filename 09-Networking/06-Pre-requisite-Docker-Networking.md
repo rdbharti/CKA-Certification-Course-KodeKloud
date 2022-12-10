@@ -11,7 +11,7 @@ $ docker run --network none nginx
 ```
 
 ## Host Network
-
+ 
 - Running docker container with `host` network
 
 ```
